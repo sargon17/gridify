@@ -1,0 +1,38 @@
+:root {
+  --gridify-gutter: 20px;
+  --gridify-max-width: 1200px;
+  --padding-x: 0.75rem;
+}
+
+.gridify__grid-overlay {
+  background-color: rgba(255, 0, 0, 0.2);
+  border: 1px solid rgba(255, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  pointer-events: none;
+  width: 100lvw;
+  height: 100%;
+  padding: 0 var(--padding-x);
+}
+
+.gridify__column-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  max-width: var(--gridify-max-width);
+  margin: 0 auto;
+  gap: var(--gridify-gutter);
+}
+
+.gridify__column {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  background: rgba(0, 0, 255, 0.2);
+  border: 1px solid rgba(0, 0, 255, 0.5);
+}

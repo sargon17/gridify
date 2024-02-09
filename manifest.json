@@ -1,0 +1,21 @@
+{
+  "manifest_version": 2,
+  "name": "Gridify: Enhance Your Web Design Workflow",
+  "version": "1.0",
+  "description": "Gridify is a versatile Chrome extension tailored for web designers and developers, streamlining the design process with a dynamic, on-page grid overlay. It empowers users to impose customizable grids onto any website, offering a toolset for precise layout alignments and a visual aid for spacing and proportion consistency. With Gridify, you can effortlessly adjust column numbers, gutter widths, and tailor grid dimensions to match various design frameworks or personal preferences. This extension is particularly valuable for ensuring design coherence across different devices, thanks to its responsive grid feature. Whether refining a CSS layout or ensuring design elements adhere to a strict grid pattern, Gridify transforms your browser into a robust design workspace.",
+  "icons": {
+    "48": "icon.png"
+  },
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon.png"
+  },
+  "permissions": ["activeTab"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "web_accessible_resources": ["gridOverlay.css"]
+}
