@@ -89,6 +89,7 @@ const updateSettings = async () => {
     columns,
     gutter,
     maxWidth,
+    margin,
   };
 
   // save the settings back to local storage
@@ -107,11 +108,13 @@ const loadSettings = async () => {
   columnsInput.value = settings.columns || 12;
   gutterInput.value = settings.gutter || 20;
   maxWidthInput.value = settings.maxWidth || 1200;
+  marginInput.value = settings.margin || 20;
 
   // update the global variables
   columns = settings.columns || 12;
   gutter = settings.gutter || 20;
   maxWidth = settings.maxWidth || 1200;
+  margin = settings.margin || 20;
 };
 
 const getUrl = async () => {

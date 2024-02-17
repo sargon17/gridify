@@ -1,7 +1,7 @@
 :root {
   --gridify-gutter: 20px;
   --gridify-max-width: 1200px;
-  --padding-x: 0.75rem;
+  --gridify-padding-x: 0.75rem;
 }
 
 .gridify__grid-overlay {
@@ -14,7 +14,7 @@
   pointer-events: none;
   width: 100lvw;
   height: 100%;
-  padding: 0 var(--padding-x);
+  padding: 0 var(--gridify-padding-x);
 }
 
 .gridify__column-container {

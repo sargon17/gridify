@@ -13,12 +13,10 @@ let margin = 20;
 
 // Listen for messages from popup.js
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
-  // console.log("message received", request);
-
   columns = request.columns;
   gutter = request.gutter;
   maxWidth = request.maxWidth;
-  margin = request.margin || 20;
+  margin = request.margin;
 
   if (request.message === "showGrid") {
     showGrid();
@@ -32,12 +30,12 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 function showGrid() {
   setGutter();
   setMaxWidth();
+  setMargin();
 
   if (gridOverlay) {
     gridOverlay.style.display = "block";
     return;
   }
-
   createGrid();
 }
 
@@ -71,3 +69,9 @@ const setGutter = () => {
 const setMaxWidth = () => {
   document.querySelector(":root").style.setProperty("--gridify-max-width", `${maxWidth}px`);
 };
+
+const setMargin = () => {
+  document.querySelector(":root").style.setProperty("--gridify-padding-x", `${margin}px`);
+};
+
+
