@@ -62,7 +62,7 @@ const loadLocalSettings = async () => {
 
   if (!measureSettings.measure) {
     // if no measure is set, default to px
-    measureSettings.measure = "px";
+    measureSettings.measure = "vw";
     localStorage.setItem(directory, JSON.stringify(measureSettings));
   }
 
