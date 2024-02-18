@@ -71,7 +71,11 @@ const setGutter = () => {
 };
 
 const setMaxWidth = () => {
-  document.querySelector(":root").style.setProperty("--gridify-max-width", `${maxWidth}px`);
+  if (maxWidth > 0) {
+    document.querySelector(":root").style.setProperty("--gridify-max-width", `${maxWidth}px`);
+  } else {
+    document.querySelector(":root").style.setProperty("--gridify-max-width", `none`);
+  }
 };
 
 const setMargin = () => {
