@@ -2,6 +2,7 @@
 <html>
 <head>
     <link rel="stylesheet" type="text/css" href="popup.css">
+    <link rel="stylesheet" type="text/css" href="css/settings.css">
 </head>
 <body>
     <div class="heading-section">
@@ -18,13 +19,13 @@
                 <label for="gutter">Gutter</label>
                 <div class="input">
                     <input type="number" id="gridify-gutter" min="0" value="15">
-                    <p>
+                    <p class="selectable-measure">
                         px
                     </p>
                 </div>
             </div>
         </div>
-            <div class="row">
+        <div class="row">
             <div>
             <label for="gutter">Max Width</label>
             <div class="input">
@@ -38,17 +39,45 @@
             <label for="gutter">Margin</label>
             <div class="input">
                 <input type="number" id="gridify-margin" min="0" value="10">
-                <p>
+                <p class="selectable-measure">
                     px
                 </p>
             </div>
         </div>
-    </div>
+        </div>
+        <div class="row">
+            <div class="measures">
+                <label for="measure" class="measure">Measure System</label>
+                <div class="buttons">
+                    <select id="gridify-measure">
+                        <option value="px">px</option>
+                        <option value="rem">rem</option>
+                        <option value="vw">vw</option>
+                    </select>
+                    <button id="measure-selector-px"
+                    data-measure="px"
+                    >
+                        px
+                    </button>
+                    <button id="measure-selector-rem"
+                    data-measure="rem"
+                    >
+                    rem
+                </button>
+                <button id="measure-selector-vw"
+                data-measure="vw"
+                >
+                        vw
+                    </button>
+                </div>
+            </div>
+        </div>
     </div>
     <div class="buttons">
         <button id="updateGrid" class="button--accent">Gridify</button>
         <button id="hideGrid">Hide</button>
     </div>
-    <script src="popup.js"></script>
+    <script type="module" src="popup.js"></script>
+    <script type="module" src="popup/settings.js"></script>
 </body>
 </html>

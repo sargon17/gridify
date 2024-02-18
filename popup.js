@@ -1,3 +1,5 @@
+import { getUrl } from "./utils.js";
+
 const updateGrid = document.getElementById("updateGrid");
 const columnsInput = document.getElementById("gridify-columns");
 const gutterInput = document.getElementById("gridify-gutter");
@@ -117,13 +119,13 @@ const loadSettings = async () => {
   margin = settings.margin || 20;
 };
 
-const getUrl = async () => {
-  let url;
+// const getUrl = async () => {
+//   let url;
 
-  url = await new Promise((resolve, reject) => {
-    chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
-      resolve(new URL(tabs[0].url));
-    });
-  });
-  return url;
-};
+//   url = await new Promise((resolve, reject) => {
+//     chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
+//       resolve(new URL(tabs[0].url));
+//     });
+//   });
+//   return url;
+// };

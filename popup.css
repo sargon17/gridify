@@ -5,6 +5,8 @@
   --color-main: #fff;
   --color-secondary: #777;
   --accent-color: #00ff94;
+
+  --button-border-radius: 0.625rem;
 }
 body {
   font-family: "Inter", sans-serif;
@@ -138,7 +140,8 @@ button {
   transform: scale(0.96);
 }
 
-.buttons > .button--accent {
+.buttons > .button--accent,
+button.active {
   background: var(--accent-color);
   border-top: 1px solid var(--accent-color);
   border-bottom: 1px solid var(--accent-color);
@@ -146,7 +149,7 @@ button {
 
   color: var(--background-secondary);
 }
-
-.buttons > .button--accent:hover {
+.buttons > .button--accent:hover,
+button.active:hover {
   box-shadow: 1px 4px 7px 0px rgba(254, 253, 253, 0.15) inset, -10px -20px 8px 0px rgba(0, 0, 0, 0.2) inset;
 }
